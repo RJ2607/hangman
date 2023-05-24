@@ -13,4 +13,5 @@ class GameUI {
   static const a4 = "assets/4.png";
   static const a5 = "assets/5.png";
   static const a6 = "assets/6.png";
+  static const aImg = "assets/gallow.png";
 }

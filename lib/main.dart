@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:hangman/game_screen.dart";
+import "package:hangman/home_screen.dart";
 
 void main() {
   runApp(MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      home: Gamescreens(),
+      home: homeScreen(),
     );
   }
 }
