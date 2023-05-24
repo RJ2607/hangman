@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:hangman/const/consts.dart';
+import 'package:hangman/game/figure_widget.dart';
 import 'package:hangman/game/hidden_letters.dart';
 
 class Gamescreens extends StatefulWidget {
@@ -14,6 +16,7 @@ class _GamescreensState extends State<Gamescreens> {
   var characters = "abcdefghijklmnopqrstuvwxyz".toUpperCase();
   var word = "baaba".toUpperCase();
   List<String> selectedchar = [];
+  var tries = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +33,20 @@ class _GamescreensState extends State<Gamescreens> {
                 flex: 3,
                 child: Column(
                   children: [
-                    Expanded(flex: 4, child: Container(color: Colors.amber)),
+                    Expanded(
+                        flex: 4,
+                        child: Stack(
+                          alignment: Alignment.center,
+                          children: [
+                            figure(GameUI.a0, tries >= 0),
+                            figure(GameUI.a1, tries >= 1),
+                            figure(GameUI.a2, tries >= 2),
+                            figure(GameUI.a3, tries >= 3),
+                            figure(GameUI.a4, tries >= 4),
+                            figure(GameUI.a5, tries >= 5),
+                            figure(GameUI.a6, tries >= 6),
+                          ],
+                        )),
                     Expanded(
                         child: Container(
                       padding: const EdgeInsets.all(8),
