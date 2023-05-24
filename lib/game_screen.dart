@@ -72,7 +72,18 @@ class _GamescreensState extends State<Gamescreens> {
                     mainAxisSpacing: 4,
                     children: characters.split("").map((e) {
                       return ElevatedButton(
-                        onPressed: () {},
+                        onPressed: selectedchar.contains(e.toUpperCase())
+                            ? null
+                            : () {
+                                setState(() {
+                                  selectedchar.add(e.toUpperCase());
+                                  if (!word
+                                      .split("")
+                                      .contains(e.toUpperCase())) {
+                                    tries++;
+                                  }
+                                });
+                              },
                         child: Text(
                           e,
                           style: TextStyle(
