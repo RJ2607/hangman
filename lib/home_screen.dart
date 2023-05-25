@@ -42,7 +42,7 @@ class _homeScreenState extends State<homeScreen> {
                           style: TextStyle(
                               fontSize: 50, fontWeight: FontWeight.bold),
                           gradient: LinearGradient(colors: [
-                            Colors.blue.shade40,
+                            Colors.blue.shade400,
                             Colors.blue.shade900,
                           ]),
                         ),
