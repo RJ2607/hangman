@@ -44,7 +44,7 @@ class _homeScreenState extends State<homeScreen> {
                           gradient: LinearGradient(colors: [
                             Colors.blue.shade400,
                             Colors.blue.shade900,
-                          ])
+                          ]),
                         ),
                       ))
                 ],
