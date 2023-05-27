@@ -48,7 +48,7 @@ class _homeScreenState extends State<homeScreen> {
                         ),
                       ))
                 ],
-              )),
+              )
           Expanded(
               flex: 3,
               child: Container(
