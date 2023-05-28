@@ -50,7 +50,7 @@ class _homeScreenState extends State<homeScreen> {
                 ],
               )),
           Expanded(
-              flex: 3,
+              flex: 3
               child: Container(
                   alignment: Alignment.topCenter,
                   child: SizedBox(
