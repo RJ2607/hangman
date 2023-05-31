@@ -59,7 +59,7 @@ class _homeScreenState extends State<homeScreen> {
                       width: 150,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.push(
+                          final word = Navigator.push(
                               context,
                               MaterialPageRoute(
                                   builder: (context) => const Gamescreens()));

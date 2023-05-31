@@ -4,6 +4,16 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:hangman/const/consts.dart';
 import 'package:hangman/game/figure_widget.dart';
 import 'package:hangman/game/hidden_letters.dart';
+import 'dart:math';
+
+String generateRandomStringFromList(List<String> list) {
+  final random = Random();
+  final index = random.nextInt(list.length);
+  return list[index];
+}
+
+final list = ['John', 'Mary', 'Peter'];
+final word = generateRandomStringFromList(list).toUpperCase();
 
 class Gamescreens extends StatefulWidget {
   const Gamescreens({super.key});
@@ -14,7 +24,7 @@ class Gamescreens extends StatefulWidget {
 
 class _GamescreensState extends State<Gamescreens> {
   var characters = "abcdefghijklmnopqrstuvwxyz".toUpperCase();
-  var word = "rishi".toUpperCase();
+
   List<String> selectedchar = [];
   var tries = 0;
 
