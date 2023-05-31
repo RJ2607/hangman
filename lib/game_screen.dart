@@ -23,7 +23,7 @@ class _GamescreensState extends State<Gamescreens> {
     return Scaffold(
         appBar: AppBar(
           elevation: 0.0,
-          title: Text("HANGMAN: THE WORD GAME"),
+          title: Text("HANGMAN"),
           centerTitle: true,
           backgroundColor: Colors.transparent,
         ),
