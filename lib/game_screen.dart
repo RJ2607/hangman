@@ -36,6 +36,14 @@ class _GamescreensState extends State<Gamescreens> {
           title: Text("HANGMAN"),
           centerTitle: true,
           backgroundColor: Colors.transparent,
+          actions: <Widget>[
+            IconButton(
+                onPressed: () {
+                  final word = generateRandomStringFromList(list).toUpperCase();
+                },
+                icon: Icon(Icons.refresh)),
+            IconButton(onPressed: () {}, icon: Icon(Icons.info))
+          ],
         ),
         body: Column(
           children: [
