@@ -1,3 +1,5 @@
+library YOUR_PACKAGE_NAME.globals;
+
 import "package:flutter/material.dart";
 import "package:hangman/const/consts.dart";
 import "package:hangman/game/figure_widget.dart";
@@ -12,6 +14,7 @@ class homeScreen extends StatefulWidget {
 }
 
 var guess_word = '';
+final list = ['John', 'Mary', 'Peter'];
 var a = 0;
 
 class _homeScreenState extends State<homeScreen> {
@@ -60,7 +63,6 @@ class _homeScreenState extends State<homeScreen> {
                       width: 150,
                       child: ElevatedButton(
                         onPressed: () {
-                          final list = ['John', 'Mary', 'Peter'];
                           guess_word =
                               generateRandomStringFromList(list).toUpperCase();
                           final word = Navigator.push(

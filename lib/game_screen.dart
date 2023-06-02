@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:hangman/const/consts.dart';
 import 'package:hangman/game/figure_widget.dart';
 import 'package:hangman/game/hidden_letters.dart';
+import 'package:hangman/home_screen.dart' as globals;
 import 'dart:math';
 
 String generateRandomStringFromList(List<String> list) {
@@ -12,7 +13,7 @@ String generateRandomStringFromList(List<String> list) {
   return list[index];
 }
 
-var word = '';
+var word = globals.guess_word;
 //final word = generateRandomStringFromList(list).toUpperCase();
 
 class Gamescreens extends StatefulWidget {
