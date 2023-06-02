@@ -11,6 +11,7 @@ class homeScreen extends StatefulWidget {
   State<homeScreen> createState() => _homeScreenState();
 }
 
+var guess_word = '';
 var a = 0;
 
 class _homeScreenState extends State<homeScreen> {
@@ -59,6 +60,9 @@ class _homeScreenState extends State<homeScreen> {
                       width: 150,
                       child: ElevatedButton(
                         onPressed: () {
+                          final list = ['John', 'Mary', 'Peter'];
+                          guess_word =
+                              generateRandomStringFromList(list).toUpperCase();
                           final word = Navigator.push(
                               context,
                               MaterialPageRoute(
