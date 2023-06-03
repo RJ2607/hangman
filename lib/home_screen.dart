@@ -62,7 +62,7 @@ class _homeScreenState extends State<homeScreen> {
                       height: 80,
                       width: 150,
                       child: ElevatedButton(
-                        onPressed: () 
+                        onPressed: () {
                           guess_word =
                               generateRandomStringFromList(list).toUpperCase();
                           final word = Navigator.push(
