@@ -15,7 +15,7 @@ String generateRandomStringFromList(List<String> list) {
 
 //var word = globals.guess_word;
 final list = ['John', 'Mary', 'Peter'];
-final word = generateRandomStringFromList(list).toUpperCase();
+var word = generateRandomStringFromList(list).toUpperCase();
 
 class Gamescreens extends StatefulWidget {
   const Gamescreens({super.key});
@@ -41,7 +41,9 @@ class _GamescreensState extends State<Gamescreens> {
           actions: <Widget>[
             IconButton(
                 onPressed: () {
-                  //word = generateRandomStringFromList(list).toUpperCase();
+                  setState(() {
+                    word = generateRandomStringFromList(list).toUpperCase();
+                  });
                 },
                 icon: Icon(Icons.refresh)),
             IconButton(onPressed: () {}, icon: Icon(Icons.info))
