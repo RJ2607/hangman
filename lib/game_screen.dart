@@ -44,6 +44,7 @@ class _GamescreensState extends State<Gamescreens> {
                   setState(() {
                     word = generateRandomStringFromList(list).toUpperCase();
                     tries = 0;
+                    selectedchar = [];
                   });
                 },
                 icon: Icon(Icons.refresh)),
