@@ -30,6 +30,8 @@ class _GamescreensState extends State<Gamescreens> {
   List<String> selectedchar = [];
   var tries = 0;
 
+  get leadDialog => null;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,7 +50,17 @@ class _GamescreensState extends State<Gamescreens> {
                   });
                 },
                 icon: Icon(Icons.refresh)),
-            IconButton(onPressed: () {}, icon: Icon(Icons.info))
+            IconButton(
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: const Text("data"),
+                        );
+                      });
+                },
+                icon: Icon(Icons.info))
           ],
         ),
         body: Column(
