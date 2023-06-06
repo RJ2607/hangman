@@ -14,8 +14,10 @@ String generateRandomStringFromList(List<String> list) {
 }
 
 //var word = globals.guess_word;
-final list = ['John', 'Mary', 'Peter'];
-var word = generateRandomStringFromList(list).toUpperCase();
+final word_list = ['John', 'Mary', 'Peter'];
+var word = generateRandomStringFromList(word_list).toUpperCase();
+//final hint_list = {};
+//var hint = "";
 
 class Gamescreens extends StatefulWidget {
   const Gamescreens({super.key});
@@ -44,7 +46,8 @@ class _GamescreensState extends State<Gamescreens> {
             IconButton(
                 onPressed: () {
                   setState(() {
-                    word = generateRandomStringFromList(list).toUpperCase();
+                    word =
+                        generateRandomStringFromList(word_list).toUpperCase();
                     tries = 0;
                     selectedchar = [];
                   });
@@ -56,7 +59,21 @@ class _GamescreensState extends State<Gamescreens> {
                       context: context,
                       builder: (context) {
                         return AlertDialog(
-                          title: const Text("data"),
+                          title: const Text("Hint"),
+                          content: Text(word),
+                          actions: [
+                            TextButton(
+                                style: TextButton.styleFrom(
+                                  backgroundColor:
+                                      Color.fromARGB(255, 27, 134, 255),
+                                  foregroundColor:
+                                      Color.fromRGBO(255, 255, 255, 1),
+                                ),
+                                child: Text("close"),
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                })
+                          ],
                         );
                       });
                 },
