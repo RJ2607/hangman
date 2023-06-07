@@ -41,7 +41,7 @@ class _GamescreensState extends State<Gamescreens> {
           elevation: 0.0,
           title: Text("HANGMAN"),
           centerTitle: true,
-          backgroundColor: Colors.transparent,
+          backgroundColor: Colors.transparent
           actions: <Widget>[
             IconButton(
                 onPressed: () {
