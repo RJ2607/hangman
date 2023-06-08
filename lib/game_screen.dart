@@ -39,7 +39,7 @@ class _GamescreensState extends State<Gamescreens> {
     return Scaffold(
         appBar: AppBar(
           elevation: 0.0,
-          title: Text("HANGMAN")
+          title: Text("HANGMAN"),
           centerTitle: true,
           backgroundColor: Colors.transparent,
           actions: <Widget>[
